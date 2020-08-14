@@ -8,22 +8,21 @@ sudo yum install -y epel-release git libc6-compat ansible python-devel py-pip py
 # DOCKER
 # https://docs.docker.com/engine/install/centos/
 # Uninstall old versions
-sudo yum remove -y docker \
-                   docker-client \
-                   docker-client-latest \
-                   docker-common \
-                   docker-latest \
-                   docker-latest-logrotate \
-                   docker-logrotate \
-                   docker-engine
+
+# sudo yum remove -y docker \
+#                    docker-client \
+#                    docker-client-latest \
+#                    docker-common \
+#                    docker-latest \
+#                    docker-latest-logrotate \
+#                    docker-logrotate \
+#                    docker-engine
 				  
 				  
 sudo yum install -y yum-utils
 
 # set up the Docker repository
-sudo yum-config-manager \
-    --add-repo \
-    https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo -y
 
 # Install Docker Engine
 #sudo yum install docker-ce docker-ce-cli containerd.io
