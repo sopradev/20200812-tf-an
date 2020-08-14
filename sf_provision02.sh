@@ -11,7 +11,14 @@ sudo yum install -y git libc6-compat python-devel py-pip python3 sshpass openssh
 ## https://phoenixnap.com/kb/how-to-install-terraform-centos-ubuntu
 #sudo wget https://releases.hashicorp.com/terraform/0.12.2/terraform_0.12.2_linux_amd64.zip
 sudo wget https://releases.hashicorp.com/terraform/0.12.29/terraform_0.12.29_linux_amd64.zip -P /tmp
-sudo unzip /tmp/terraform_0.12.29_linux_amd64.zip –d /usr/local/bin
+sudo unzip /tmp/terraform_0.12.29_linux_amd64.zip -d /usr/local/bin
+
+## Installing the Terraform CLI and the IBM Cloud Provider plug-in
+mkdir $HOME/.terraform.d/plugins
+wget https://github.com/IBM-Cloud/terraform-provider-ibm/releases/download/v1.10.0/terraform-provider-ibm_1.10.0_linux_amd64.zip -P /tmp
+unzip /tmp/terraform-provider-ibm_1.10.0_linux_amd64.zip -d $HOME/.terraform.d/plugins/
+#mv $HOME/Downloads/terraform-provider-ibm* $HOME/.terraform.d/plugins/
+
 
 ## DOCKER
 ## https://docs.docker.com/engine/install/centos/
