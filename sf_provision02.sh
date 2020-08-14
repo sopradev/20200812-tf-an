@@ -10,8 +10,8 @@ sudo yum install -y git libc6-compat python-devel py-pip python3 sshpass openssh
 ## Terraform
 ## https://phoenixnap.com/kb/how-to-install-terraform-centos-ubuntu
 #sudo wget https://releases.hashicorp.com/terraform/0.12.2/terraform_0.12.2_linux_amd64.zip
-sudo wget https://releases.hashicorp.com/terraform/0.12.29/terraform_0.12.29_linux_amd64.zip
-sudo unzip ./terraform_0.12.29_linux_amd64.zip –d /usr/local/bin
+sudo wget https://releases.hashicorp.com/terraform/0.12.29/terraform_0.12.29_linux_amd64.zip -P /tmp
+sudo unzip /tmp/terraform_0.12.29_linux_amd64.zip –d /usr/local/bin
 
 ## DOCKER
 ## https://docs.docker.com/engine/install/centos/
