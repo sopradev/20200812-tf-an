@@ -103,16 +103,15 @@ Ju//vTVHi9hxi5BQTYuftQKBgHthBeK7Ig9w1DkJglxyO4QACEPdNFrpVIjhbL/F
 BnG72xU//HQZFfdr17mqOlCetbCfshVrA2UAyiEcAO/MaDYIG6AmJIc11g+0749n
 mQgrdMlMuFKKuMR3JlFiy6msvEzifLbJESQw8z6LhtFJPboXuZ/wQfwUfpRZdlKD
 87yBAoGAZjPk2SmdNhl8AuROBq9IFmK81LQHhHkog3oX+enwyv1vMRO9EsV64Lpy
-g8Bm7pbuco2Fg42vO799ZjL+w9dN6VFXfEGYASKB3gKRVCgywxRTOMkJyJugBwWt
 OSlw75AnJFy9nDdZgOQ7ldnhIgW7vc+WSPhuEE5CjrPye0ODq5Q=
 -----END RSA PRIVATE KEY-----
 " > /root/.ssh/id_rsa
 
 ## ~.ssh/id_rsa.pub
-echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDUKyUT6Gy+IrgBQNQqBY2TGbJo7dHTXqoU713vHkpAtBHsfAur2tDQ+DHLcIJPp45AdY+yaRBYdwafITO9rU/sBKJKJkvyN3M/n0hjV6osIckQUzSfMRDc9FqIdlbIqj5Nnzz0Nk9MqGdTsPfeT8lQPSj5FrkEXYWZC0sgynhwEnQWlBMBpyM8LA2maXAfSge9+VzkDAPsNsuoXNaACsPp9Sy5Mm5WOBy/PjvXSjrZ4SGHpnOgsnknnx1QWY2f+MDhZMGwFiTdol5QERL8BVhTIyBJNboCmY+Bzk7TDYdue7/HSHyi7eIm6OUrXSXoyuKNYkV7ytVDcFRsc0JBeLcb jambo@mambo.com" > /root/.ssh/id_rsa.pub
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDUKyUT6Gy+IrgBQNQqBY2TGbJo13vHkpAtBHsfAur2tDQ+DHLcIJPp45AdY+yaRBYdwafITO9rU/sBKJKJkvyN3M/n0hjV6osIckQUzSfMRDc9FqIdlbIqj5Nnzz0Nk9MqGdTsPfeT8lQPSj5FrkEXYWZC0sgynhwEnQWlBMBpyM8LA2maXAfSge9+VzkDAPsNsuoXNaACsPp9Sy5Mm5WOBy/PjvXSjrZ4SGHpnOgsnknnx1QWY2f+MDhZMGwFiTdol5QERL8BVhTIyBJNboCmY+Bzk7TDYdue7/HSHyi7eIm6OUrXSXoyuKNYkV7ytVDcFRsc0JBeLcb jambo@mambo.com" > /root/.ssh/id_rsa.pub
 
 ## ~.ssh/knnown_hosts
-echo "innersource.soprasteria.com,40.66.59.79 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBO6V+xHHX52SjDLkxtHivqZAOl9TjFiWEUB7F7PV3+/XeK1DtSmqXX9QTnLjQiCJg9F5oTGtltXGku4RV+DE67s=" >> /root/.ssh/known_hosts
+echo "innersource.soprasteria.com,40.66.59.79 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIV+xHHX52SjDLkxtHivqZAOl9TjFiWEUB7F7PV3+/XeK1DtSmqXX9QTnLjQiCJg9F5oTGtltXGku4RV+DE67s=" >> /root/.ssh/known_hosts
 
 ## https://gist.github.com/grenade/6318301
 chmod 600 /root/.ssh/id_rsa
