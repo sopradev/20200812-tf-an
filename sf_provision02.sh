@@ -8,29 +8,11 @@
 ## Update system
 #################################################################
 sudo yum update -y
-sudo yum install -y wget unzip mailx
+sudo yum install -y wget unzip
 
 sudo yum install -y epel-release
 sudo yum install -y ansible
 sudo yum install -y git libc6-compat python-devel py-pip python3 sshpass openssh-client
-
-wait $!
-
-#################################################################
-## Config mail for external smtp
-#################################################################
-echo "
-set smtp=mail.gmx.com:587
-set smtp-use-starttls
-set ssl-verify=ignore
-set nss-config-dir=/etc/pki/nssdb
-set smtp-auth=login
-set from=sap-hana-poc@gmx.com
-set smtp-auth-user=sap-hana-poc@gmx.com
-set smtp-auth-password=sap-hana-poc
-" > /etc/mail.rc
-
-### echo "Your message" | mail -v -s "Message Subject" roumen.alvarado@soprasteria.com
 
 
 #################################################################
@@ -211,15 +193,3 @@ terraform apply -input=false tfplan
 #ansible-playbook /tmp/sopra-sap-hana/ansible/site.yml -vvv
 ansible-playbook /tmp/sopra-sap-hana/xjenkins/ansible/site.yml
 
-
-
-#################################################################
-# Send mail
-#################################################################
-ip=$(/sbin/ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/')
-hn=$(hostname)
-echo "Server $hn is alredy up and ready." > /tmp/msg.txt
-echo "Open your browser to https://$ip:8080 to run Jenkins jobs" >> /tmp/msg.txt
-echo "Your message" | mail -v -s "Message Subject" roumen.alvarado@soprasteria.com
-
-cat /tmp/msg.txt | mail -v -s "IBMCloud virtual server instance (VSI): $hn" roumen.alvarado@soprasteria.com
